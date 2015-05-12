@@ -1,0 +1,31 @@
+{
+  "name": "fortysixelks-node",
+  "version": "0.0.1",
+  "description": "A node.js wrapper of the 46elks API (http://46elks.com)",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "basic-auth": "^1.0.1",
+    "request": "^2.55.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nippe/fortysixelks-node.git"
+  },
+  "keywords": [
+    "46elks",
+    "SMS"
+  ],
+  "author": "Niklas Nihlén",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nippe/fortysixelks-node/issues"
+  },
+  "homepage": "https://github.com/nippe/fortysixelks-node"
+}
