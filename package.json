@@ -4,13 +4,15 @@
   "description": "A node.js wrapper of the 46elks API (http://46elks.com)",
   "main": "index.js",
   "directories": {
-    "test": "test"
+    "test": "mocha --reporter spec"
   },
   "dependencies": {
-    "basic-auth": "^1.0.1",
-    "request": "^2.55.0"
+    "basic-auth": "^1.0.3",
+    "request": "^2.65.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "^1.9.0"
+  },
   "scripts": {
     "test": "test"
   },
