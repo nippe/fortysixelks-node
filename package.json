@@ -8,9 +8,11 @@
   },
   "dependencies": {
     "basic-auth": "^1.0.3",
+    "bluebird": "^3.0.5",
     "request": "^2.65.0"
   },
   "devDependencies": {
+    "debug": "^2.2.0",
     "eslint": "^1.9.0"
   },
   "scripts": {
