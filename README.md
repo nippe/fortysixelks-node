@@ -101,6 +101,36 @@ Response format
 }
 ```
 
+### Flash SMS
+Using Promises
+```
+var client = require('fortysixelks-node')('<username>', '<password>');
+client.sendFlashSms('PIN. 123456', '+46123456', '+46123456').then(function(res){ console.log(res);});
+```
+
+Callback
+```
+var client = require('fortysixelks-node')('<username>', '<password>');
+client.sendFlashSms('PIN: 123456', '+46123456', '+46123456', function(err, res){
+  if(err) console.error(':( Error! ' + err.message);
+  console.log(res);
+});
+```
+
+Response
+```
+{
+  direction: 'outgoing',
+  from: '+46123456',
+  created: '2015-11-11T20:06:18.251418',
+  flashsms: 'yes',
+  to: '+467123456',
+  cost: 3500,
+  message: 'PIN: 123456',
+  id: 's68c992f33df7903ffbfd721926fe7207'
+}
+```
+
 
 ## Aliases
 These names end you up in the same place.
