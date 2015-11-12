@@ -1,9 +1,11 @@
 # fortysixelks-node
 A node.js wrapper of the 46elks API (http://46elks.com)
 
+**This is still a early alfa under development, that means the api is not done and WILL change. It also means not all functionality is in place and refactorings will be perfomed.** Please leave feedback inte issues if you find something missing, broke or have feedback.
 
 ## Installation
 
+npm soon!
 
 ## API
 Everything hangs off a Client object:
@@ -131,6 +133,39 @@ Response
 }
 ```
 
+#### Set SMS url
+The url that gets called when 46elks gets a incoming sms to your allocated number.
+Using Promises
+```
+var client = require('fortysixelks-node')('<username>', '<password>');
+client.setSmsUrl('nd51066f1746006c917aebb9sdfdsde58', 'http://hardcoded.se/incoming_sms')
+  .then(function(res) {console.dir(res);});
+```
+
+Callback
+```
+var client = require('fortysixelks-node')('<username>', '<password>');
+client.setSmsUrl('nd51066f1746006c917aebb9sdfdsde58', 'http://hardcoded.se/incoming_sms', function(err, res) {
+  if(err) console.error(':( Error! ' + err.message);
+  console.log(res);
+});
+```
+
+Response
+```
+{
+  category: 'mobile',
+  country: 'se',
+  expires: '2015-12-12T14:56:07',
+  number: '+46123456',
+  capabilities: [ 'sms', 'voice' ],
+  active: 'yes',
+  sms_url: 'http://hardcoded.se/incoming_sms',
+  id: 'nd51066f1746006c917aebb9sdfdsde58'
+}
+```
+
+
 ### MMS
 **I've added functions for MMS but they are not tested, I did not have a MMS enabled number and could not find in the docs how-to send an MMS.**
 
@@ -212,7 +247,6 @@ client.allocateNewNumber('country (se)', 'sms url', 'mms url', 'voice start url'
 ```
 **Only country is mandatory!**
 
-
 Response
 ```
 {
@@ -230,6 +264,42 @@ Response
 }
 ```
 
+### Deallocate / inactivate number
+**Reminder: You cannot get a deactivated number back.**
+```
+var client = require('fortysixelks-node')('<username>', '<password>');
+client.deallocateNumber('nd510a4a4a446006c917aeb1vvdc506e58').then(function(res) {
+  console.log(res);
+});
+```
+**Only country is mandatory!**
+
+Response
+```
+{
+  "category": "mobile",
+  "country": "se",
+  "expires": "2015-12-12T14:56:07",
+  "number": "+46123456",
+  "capabilities": [
+    "sms",
+    "voice"
+  ],
+  "active": "no",
+  "sms_url": "http://hardcoded.se/sms_hook",
+  "id": "nd510a4a4a446006c917aeb1vvdc506e58"
+}
+```
+
+### Calls
+#### List Calls
+Coming...
+
+
+### Accounts
+#### List Subaccounts
+
+#### Create Subaccounts
 
 ## Aliases
 These names end you up in the same place.
