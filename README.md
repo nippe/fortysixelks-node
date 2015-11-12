@@ -135,6 +135,101 @@ Response
 **I've added functions for MMS but they are not tested, I did not have a MMS enabled number and could not find in the docs how-to send an MMS.**
 
 
+### Numbers
+#### List Numbers
+
+```
+var client = require('fortysixelks-node')('<username>', '<password>');
+client.listNumbers().then(function(res) {
+  console.log(res);
+});
+```
+
+Response
+```
+{
+  "data": [
+    {
+      "category": "mobile",
+      "country": "se",
+      "expires": "2015-12-12T14:56:07",
+      "number": "+46123456",
+      "capabilities": [
+        "sms",
+        "voice"
+      ],
+      "active": "yes",
+      "sms_url": "http://hardcoded.se/sms_hook",
+      "id": "nd510a4a4a446006c917aebb91dc506e58"
+    },
+    {
+      "category": "mobile",
+      "country": "se",
+      "number": "+46123456",
+      "capabilities": [
+        "sms",
+        "voice"
+      ],
+      "active": "no",
+      "sms_url": "http://hardcoded.se/sms_hook",
+      "id": "n420baa4a40e29c48282ec3415bdacaa5"
+    }
+  ]
+}
+```
+
+### Detail on one number
+```
+var client = require('fortysixelks-node')('<username>', '<password>');
+client.getNumberDetail('nd510a4a4a446006c917aebb91dc506e58').then(function(res) {
+  console.log(res);
+});
+```
+
+Response
+```
+{
+  "category": "mobile",
+  "country": "se",
+  "expires": "2015-12-12T14:56:07",
+  "number": "+46123456",
+  "capabilities": [
+    "sms",
+    "voice"
+  ],
+  "active": "yes",
+  "sms_url": "http://hardcoded.se/sms_hook",
+  "id": "nd510a4a4a446006c917aebb91dc506e58"
+}
+```
+
+### Allocate Numbers
+```
+var client = require('fortysixelks-node')('<username>', '<password>');
+client.allocateNewNumber('country (se)', 'sms url', 'mms url', 'voice start url').then(function(res) {
+  console.log(res);
+});
+```
+**Only country is mandatory!**
+
+
+Response
+```
+{
+  "category": "mobile",
+  "country": "se",
+  "expires": "2015-12-12T14:56:07",
+  "number": "+46123456",
+  "capabilities": [
+    "sms",
+    "voice"
+  ],
+  "active": "yes",
+  "sms_url": "http://hardcoded.se/sms_hook",
+  "id": "nd510a4a4a446006c917aebb91dc506e58"
+}
+```
+
 
 ## Aliases
 These names end you up in the same place.
