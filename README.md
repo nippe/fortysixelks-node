@@ -131,11 +131,15 @@ Response
 }
 ```
 
+### MMS
+**I've added functions for MMS but they are not tested, I did not have a MMS enabled number and could not find in the docs how-to send an MMS.**
+
+
 
 ## Aliases
 These names end you up in the same place.
 
-|method name | other method name|
+|Method name | Other method name|
 |------------|------------------|
-|sendSms|sendMessage|
-|listSms|listMessages|
+| sendSms    | sendMessage      |
+| listSms    | listMessages     |
