@@ -1,7 +1,7 @@
 # fortysixelks-node
-A node.js wrapper of the 46elks API (http://46elks.com)
+A node.js wrapper of the 46elks API (http://46elks.com). Currently supports sending sms/text messages, flash sms, allocate numbers, deallocate/inactivet numbers, create subaccounts.
 
-**This is still a early alfa under development, that means the api is not done and WILL change. It also means not all functionality is in place and refactorings will be perfomed.** Please leave feedback inte issues if you find something missing, broke or have feedback.
+**This is still a early alfa under development, that means the api is not done and WILL change. It also means not all functionality is in place and refactorings will be perfomed.** Please leave feedback in the issues if you find something missing, broke or have feedback.
 
 ## Installation
 
