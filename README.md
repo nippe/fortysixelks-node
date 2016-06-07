@@ -5,7 +5,7 @@ A node.js wrapper of the 46elks API (http://46elks.com)
 
 ## Installation
 
-npm soon!
+npm install fortysixelks-node
 
 ## API
 Everything hangs off a Client object:
