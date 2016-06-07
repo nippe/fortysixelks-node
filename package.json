@@ -17,7 +17,7 @@
     "mocha": "^2.5.3"
   },
   "scripts": {
-    "test": "_mocha lib/**/*tests.js",
+    "test": "_mocha tests",
     "coverage": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -R spec"
   },
   "repository": {
