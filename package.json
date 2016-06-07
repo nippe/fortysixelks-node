@@ -3,9 +3,7 @@
   "version": "0.1.3",
   "description": "A node.js wrapper of the 46elks API (http://46elks.com)",
   "main": "index.js",
-  "directories": {
-    "test": "mocha --reporter spec"
-  },
+  "directories": {},
   "dependencies": {
     "basic-auth": "^1.0.3",
     "bluebird": "^3.0.5",
@@ -14,10 +12,13 @@
     "url-join": "0.0.1"
   },
   "devDependencies": {
-    "eslint": "^1.9.0"
+    "eslint": "^1.9.0",
+    "istanbul": "^0.4.3",
+    "mocha": "^2.5.3"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --reporter spec",
+    "coverage": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -R spec"
   },
   "repository": {
     "type": "git",
@@ -26,8 +27,8 @@
   "keywords": [
     "46elks",
     "SMS",
-		"texting",
-		"calling"
+    "texting",
+    "calling",
     "telco"
   ],
   "author": "Niklas Nihlén <niklas.nihlen@gmail.com> (http://hardcoded.se)",
