@@ -11,8 +11,8 @@
     "url-join": "^1.1.0"
   },
   "devDependencies": {
-    "eslint": "^2.13.0",
-    "istanbul": "^0.4.3",
+    "eslint": "^2.13.1",
+    "istanbul": "^0.4.4",
     "mocha": "^2.5.3"
   },
   "scripts": {
