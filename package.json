@@ -13,7 +13,8 @@
   "devDependencies": {
     "eslint": "^2.13.1",
     "istanbul": "^0.4.4",
-    "mocha": "^2.5.3"
+    "mocha": "^2.5.3",
+    "should": "^9.0.2"
   },
   "scripts": {
     "test": "_mocha ./**/*tests.js",
