@@ -11,12 +11,13 @@
     "url-join": "^1.1.0"
   },
   "devDependencies": {
-    "eslint": "^2.13.0",
-    "istanbul": "^0.4.3",
-    "mocha": "^2.5.3"
+    "eslint": "^2.13.1",
+    "istanbul": "^0.4.4",
+    "mocha": "^2.5.3",
+    "should": "^9.0.2"
   },
   "scripts": {
-    "test": "_mocha tests",
+    "test": "_mocha ./**/*tests.js",
     "coverage": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -R spec"
   },
   "repository": {
