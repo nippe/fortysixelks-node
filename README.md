@@ -3,9 +3,6 @@ A node.js wrapper of the 46elks API (http://46elks.com). Currently supports send
 
 [![Build Status](https://travis-ci.org/nippe/fortysixelks-node.svg?branch=master)](https://travis-ci.org/nippe/fortysixelks-node)
 
-## Node versions
-From fortysixelks-node >= 0.2.0 I'm supporting node 4 and up. The reason is that I use `Object.assign`.
-
 ## Installation
 
 `npm install fortysixelks-node`
