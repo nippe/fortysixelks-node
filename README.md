@@ -1,9 +1,10 @@
 # fortysixelks-node
 A node.js wrapper of the 46elks API (http://46elks.com). Currently supports sending sms/text messages, flash sms, allocate numbers, deallocate/inactivet numbers, create subaccounts.
 
-**This is still a early alfa under development, that means the api is not done and WILL change. It also means not all functionality is in place and refactorings will be perfomed.** Please leave feedback in the issues if you find something missing, broke or have feedback.
-
 [![Build Status](https://travis-ci.org/nippe/fortysixelks-node.svg?branch=master)](https://travis-ci.org/nippe/fortysixelks-node)
+
+## Node versions
+From fortysixelks-node >= 0.2.0 I'm supporting node 4 and up. The reason is that I use `Object.assign`.
 
 ## Installation
 
@@ -103,6 +104,22 @@ Response format
        id: 'sf0a416264bbd36f507d047c877849c04'
     } ]
 }
+```
+
+### List SMS from date
+
+Using Promises
+```
+var client = require('fortysixelks-node')('<username>', '<password>');
+client.listSmsFrom('2015-11-09T06:47:58.990000').then(function(res) { console.log(res); });
+```
+
+Using Callbacks
+```
+var client = require('fortysixelks-node')('<username>', '<password>');
+client.listSmsFrom('2015-11-09T06:47:58.990000', function(err, res){
+  console.log(res);
+})
 ```
 
 ### Flash SMS
