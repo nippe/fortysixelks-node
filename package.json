@@ -1,6 +1,6 @@
 {
   "name": "fortysixelks-node",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "A node.js wrapper of the 46elks API (http://46elks.com)",
   "main": "index.js",
   "directories": {},
