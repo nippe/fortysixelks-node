@@ -28,3 +28,5 @@ node_modules
 
 # Local test-script
 test.js
+
+*.sw*
