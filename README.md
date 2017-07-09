@@ -16,7 +16,7 @@ var client = require('fortysixelks-node')('<username>', '<password>');
 
 ### Send SMS
 Using promises
-```
+```javascript
 var client = require('fortysixelks-node')('<username>', '<password>');
 client.sendSms('Test ' + new Date(), '+461234567', '+461234567')
   .then(function(res){
@@ -25,7 +25,7 @@ client.sendSms('Test ' + new Date(), '+461234567', '+461234567')
 ```
 
 Using callbacks
-```
+```javascript
 var client = require('fortysixelks-node')('<username>', '<password>');
 client.sendSms('Test' + new Date(), '+46123456', '+46123456', function(err, res){
   if(err) console.log(':(');
@@ -34,7 +34,7 @@ client.sendSms('Test' + new Date(), '+46123456', '+46123456', function(err, res)
 ```
 
 Response format (JSON)
-```
+```javascript
 {
   direction: 'outgoing',
   from: '+46123456',
@@ -48,20 +48,20 @@ Response format (JSON)
 
 ### List SMS
 Using Promises
-```
+```javascript
 var client = require('fortysixelks-node')('<username>', '<password>');
 client.listSms().then(function(res) { console.log(res); });
 ```
 
 Using Callbacks
-```
+```javascript
 var client = require('fortysixelks-node')('<username>', '<password>');
 client.listSms(function(err, res){
   console.log(res);
 })
 ```
 Response format
-```
+```javascript
 { data:
    [ { status: 'delivered',
        delivered: '2015-11-11T14:10:40.854000',
@@ -106,13 +106,13 @@ Response format
 ### List SMS from date
 
 Using Promises
-```
+```javascript
 var client = require('fortysixelks-node')('<username>', '<password>');
 client.listSmsFrom('2015-11-09T06:47:58.990000').then(function(res) { console.log(res); });
 ```
 
 Using Callbacks
-```
+```javascript
 var client = require('fortysixelks-node')('<username>', '<password>');
 client.listSmsFrom('2015-11-09T06:47:58.990000', function(err, res){
   console.log(res);
@@ -121,13 +121,13 @@ client.listSmsFrom('2015-11-09T06:47:58.990000', function(err, res){
 
 ### Flash SMS
 Using Promises
-```
+```javascript
 var client = require('fortysixelks-node')('<username>', '<password>');
 client.sendFlashSms('PIN. 123456', '+46123456', '+46123456').then(function(res){ console.log(res);});
 ```
 
 Callback
-```
+```javascript
 var client = require('fortysixelks-node')('<username>', '<password>');
 client.sendFlashSms('PIN: 123456', '+46123456', '+46123456', function(err, res){
   if(err) console.error(':( Error! ' + err.message);
@@ -136,7 +136,7 @@ client.sendFlashSms('PIN: 123456', '+46123456', '+46123456', function(err, res){
 ```
 
 Response
-```
+```javascript
 {
   direction: 'outgoing',
   from: '+46123456',
@@ -152,14 +152,14 @@ Response
 #### Set SMS url
 The url that gets called when 46elks gets a incoming sms to your allocated number.
 Using Promises
-```
+```javascript
 var client = require('fortysixelks-node')('<username>', '<password>');
 client.setSmsUrl('nd51066f1746006c917aebb9sdfdsde58', 'http://hardcoded.se/incoming_sms')
   .then(function(res) {console.dir(res);});
 ```
 
 Callback
-```
+```javascript
 var client = require('fortysixelks-node')('<username>', '<password>');
 client.setSmsUrl('nd51066f1746006c917aebb9sdfdsde58', 'http://hardcoded.se/incoming_sms', function(err, res) {
   if(err) console.error(':( Error! ' + err.message);
@@ -168,7 +168,7 @@ client.setSmsUrl('nd51066f1746006c917aebb9sdfdsde58', 'http://hardcoded.se/incom
 ```
 
 Response
-```
+```javascript
 {
   category: 'mobile',
   country: 'se',
@@ -189,7 +189,7 @@ Response
 ### Numbers
 #### List Numbers
 
-```
+```javascript
 var client = require('fortysixelks-node')('<username>', '<password>');
 client.listNumbers().then(function(res) {
   console.log(res);
@@ -197,7 +197,7 @@ client.listNumbers().then(function(res) {
 ```
 
 Response
-```
+```javascript
 {
   "data": [
     {
@@ -230,7 +230,7 @@ Response
 ```
 
 ### Detail on one number
-```
+```javascript
 var client = require('fortysixelks-node')('<username>', '<password>');
 client.getNumberDetail('nd510a4a4a446006c917aebb91dc506e58').then(function(res) {
   console.log(res);
@@ -238,7 +238,7 @@ client.getNumberDetail('nd510a4a4a446006c917aebb91dc506e58').then(function(res) 
 ```
 
 Response
-```
+```javascript
 {
   "category": "mobile",
   "country": "se",
@@ -255,7 +255,7 @@ Response
 ```
 
 ### Allocate Numbers
-```
+```javascript
 var client = require('fortysixelks-node')('<username>', '<password>');
 client.allocateNewNumber('country (se)', 'sms url', 'mms url', 'voice start url').then(function(res) {
   console.log(res);
@@ -264,7 +264,7 @@ client.allocateNewNumber('country (se)', 'sms url', 'mms url', 'voice start url'
 **Only country is mandatory!**
 
 Response
-```
+```javascript
 {
   "category": "mobile",
   "country": "se",
@@ -282,7 +282,7 @@ Response
 
 ### Deallocate / inactivate number
 **Reminder: You cannot get a deactivated number back.**
-```
+```javascript
 var client = require('fortysixelks-node')('<username>', '<password>');
 client.deallocateNumber('nd510a4a4a446006c917aeb1vvdc506e58').then(function(res) {
   console.log(res);
@@ -291,7 +291,7 @@ client.deallocateNumber('nd510a4a4a446006c917aeb1vvdc506e58').then(function(res)
 **Only country is mandatory!**
 
 Response
-```
+```javascript
 {
   "category": "mobile",
   "country": "se",
