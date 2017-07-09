@@ -1,4 +1,4 @@
-# fortysixelks-node
+# fortysixelks-node <sup>[![version badge](https://v.egoist.moe/npm/fortysixelks-node.svg)](https://npmjs.com/package/fortysixelks-node)</sup>
 A node.js wrapper of the 46elks API (http://46elks.com). Currently supports sending sms/text messages, flash sms, allocate numbers, deallocate/inactivet numbers, create subaccounts.
 
 [![Build Status](https://travis-ci.org/nippe/fortysixelks-node.svg?branch=master)](https://travis-ci.org/nippe/fortysixelks-node)
