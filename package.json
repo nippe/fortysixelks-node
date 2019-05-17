@@ -6,7 +6,7 @@
   "directories": {},
   "dependencies": {
     "bluebird": "^3.5.0",
-    "debug": "^2.6.8",
+    "debug": "^4.1.1",
     "request": "^2.81.0",
     "url-join": "^1.1.0",
     "util-extend": "^1.0.3"
