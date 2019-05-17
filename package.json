@@ -5,17 +5,17 @@
   "main": "index.js",
   "directories": {},
   "dependencies": {
-    "bluebird": "^3.5.0",
-    "debug": "^2.6.8",
-    "request": "^2.81.0",
-    "url-join": "^1.1.0",
+    "bluebird": "^3.5.4",
+    "debug": "^4.1.1",
+    "request": "^2.88.0",
+    "url-join": "^4.0.0",
     "util-extend": "^1.0.3"
   },
   "devDependencies": {
-    "eslint": "^3.19.0",
+    "eslint": "^5.16.0",
     "istanbul": "^0.4.5",
-    "mocha": "^3.4.2",
-    "should": "^11.2.1"
+    "mocha": "^6.1.4",
+    "should": "^13.2.3"
   },
   "scripts": {
     "test": "_mocha ./**/*tests.js",
