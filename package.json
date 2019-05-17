@@ -15,7 +15,7 @@
     "eslint": "^3.19.0",
     "istanbul": "^0.4.5",
     "mocha": "^3.4.2",
-    "should": "^11.2.1"
+    "should": "^13.2.3"
   },
   "scripts": {
     "test": "_mocha ./**/*tests.js",
