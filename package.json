@@ -12,12 +12,14 @@
     "util-extend": "^1.0.3"
   },
   "devDependencies": {
+    "coveralls": "^3.0.3",
     "eslint": "^5.16.0",
     "jest": "^24.8.0"
   },
   "scripts": {
     "test": "jest",
-    "test:coverage": "npm run test -- --coverage"
+    "test:coverage": "npm run test -- --coverage",
+    "test:ci": "npm run test:coverage -- --coverageReporters=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
