@@ -13,13 +13,11 @@
   },
   "devDependencies": {
     "eslint": "^5.16.0",
-    "istanbul": "^0.4.5",
-    "mocha": "^6.1.4",
-    "should": "^13.2.3"
+    "jest": "^24.8.0"
   },
   "scripts": {
-    "test": "_mocha ./**/*tests.js",
-    "coverage": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -R spec"
+    "test": "jest",
+    "test:coverage": "npm run test -- --coverage"
   },
   "repository": {
     "type": "git",
