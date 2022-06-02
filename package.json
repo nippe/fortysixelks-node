@@ -1,41 +1,42 @@
 {
-  "name": "fortysixelks-node",
-  "version": "0.3.2",
-  "description": "A node.js wrapper of the 46elks API (http://46elks.com)",
-  "main": "index.js",
-  "directories": {},
-  "dependencies": {
-    "bluebird": "^3.5.4",
-    "debug": "^4.1.1",
-    "request": "^2.88.0",
-    "url-join": "^4.0.0",
-    "util-extend": "^1.0.3"
-  },
-  "devDependencies": {
-    "coveralls": "^3.0.3",
-    "eslint": "^5.16.0",
-    "jest": "^24.8.0"
-  },
-  "scripts": {
-    "test": "jest",
-    "test:coverage": "npm run test -- --coverage",
-    "test:ci": "npm run test:coverage -- --coverageReporters=text-lcov | coveralls"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nippe/fortysixelks-node.git"
-  },
-  "keywords": [
-    "46elks",
-    "SMS",
-    "texting",
-    "calling",
-    "telco"
-  ],
-  "author": "Niklas Nihlén <niklas.nihlen@gmail.com> (http://hardcoded.se)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/nippe/fortysixelks-node/issues"
-  },
-  "homepage": "https://github.com/nippe/fortysixelks-node"
+	"name": "fortysixelks-node",
+	"version": "0.3.2",
+	"description": "A node.js wrapper of the 46elks API (http://46elks.com)",
+	"main": "index.js",
+	"directories": {},
+	"dependencies": {
+		"bluebird": "^3.7.2",
+		"debug": "^4.3.4",
+		"request": "^2.88.0",
+		"url-join": "^4.0.1",
+		"util-extend": "^1.0.3"
+	},
+	"devDependencies": {
+		"coveralls": "^3.1.1",
+		"eslint": "^8.16.0",
+		"jest": "^28.1.0"
+	},
+	"scripts": {
+		"test": "jest",
+		"test:coverage": "npm run test -- --coverage",
+		"test:ci": "npm run test:coverage -- --coverageReporters=text-lcov | coveralls"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/nippe/fortysixelks-node.git"
+	},
+	"keywords": [
+		"46elks",
+		"SMS",
+		"texting",
+		"calling",
+		"telco"
+	],
+	"author": "Niklas Nihlén <niklas.nihlen@gmail.com> (http://hardcoded.se)",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/nippe/fortysixelks-node/issues"
+	},
+	"homepage": "https://github.com/nippe/fortysixelks-node",
+	"type": "commonjs"
 }
